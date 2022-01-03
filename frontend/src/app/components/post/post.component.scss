@@ -1,0 +1,41 @@
+.main {
+    width: 450px;
+    height: fit-content;
+    font-family: SF;
+    cursor: pointer;
+    padding-bottom: 40px;
+    &__wrapper {
+        z-index: 1;
+        position: relative;
+        outline: solid black 1px;
+    }
+    &__inner {
+        padding: 25px;
+    }
+    &__image {
+        min-height: 250px;
+    }
+    &__timestamp {
+        font-family: SFL;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        letter-spacing: 0.5px;
+        opacity: 0.8;
+        margin-bottom: 15px;
+
+    }
+    &:hover {
+        .main__title, .main__subtitle {
+           color: rgb(88, 0, 189);
+        }
+    }
+}

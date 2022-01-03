@@ -1,0 +1,54 @@
+<section class="main">
+    <section class="main__post">
+        <div class="main__post__wrapper">
+            <div class="main__post__inner">
+                <p class="main__post__timestamp">{{postData.timestamp}}</p>
+                <p [textContent]="postData.title" (input)="onTitleChange($event.target)" spellcheck="false" contentEditable="true" class="main__post__title"></p>
+                <p [textContent]="postData.subtitle" (input)="onSubtitleChange($event.target)" spellcheck="false" contentEditable="true" class="main__post__subtitle">
+                    
+                    </p>
+                    <div class="main__post__thumbnail">
+                        <img class="main__post__image" [src]="postData.thumbnail">
+                        <div class="main__post__overlay">
+                            <button class="main__post__overlay__button" (click)="openThumbnailSelector()">Chọn ảnh Thumbnail</button>
+                        </div>
+                    </div>
+            </div>
+            <div class="main__post__content">
+                <ckeditor [(ngModel)]="postData.content" spellcheck="false" [editor]="Editor" [config]="editorConfig"></ckeditor>
+            <hr>
+            <div class="main__post__action">
+                <p class="main__post__action__category">
+                    Art & Culture
+                </p>
+            </div>
+            </div>
+            
+        </div>
+    </section>
+</section>
+<section class="sidebar cdk-overlay-pane">
+    <div class="sidebar__wrapper">
+        <div class="sidebar__item">
+            <button (click)="goBackHome()" style="background-color: rebeccapurple; color: white;"><mat-icon>home</mat-icon></button>
+            <div class="sidebar__item__description">Về trang chủ</div>
+        </div>
+        <div class="sidebar__item">
+            <button (click)="submit()" style="background-color: teal; color: white;"><mat-icon>save</mat-icon></button>
+            <div class="sidebar__item__description">Lưu</div>
+        </div>
+        <div class="sidebar__item">
+            <button (click)="deletePost()" style="background-color: rgba(255, 0, 0, 0.603); color: white;"><mat-icon>delete</mat-icon></button>
+            <div class="sidebar__item__description">Xóa</div>
+        </div>
+        <div *ngIf="!postData.isPublished" class="sidebar__item">
+            <button (click)="publishPost()" style="background-color: green; color: white;"><mat-icon>publish</mat-icon></button>
+            <div class="sidebar__item__description">Xuất bản</div>
+        </div>
+        <div *ngIf="postData.isPublished" class="sidebar__item">
+            <button (click)="unpublishPost()" style="background-color: gray; color: white;"><mat-icon>remove_circle</mat-icon></button>
+            <div class="sidebar__item__description">Ẩn bài viết</div>
+        </div>
+    </div>
+</section>
+<input (input)="onThumbnailSelect()" type="file" hidden id="thumbnail">

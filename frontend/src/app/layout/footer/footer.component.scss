@@ -1,0 +1,87 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 98%;
+    margin-left: 1%;
+    border-top: solid black 1px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &__title {
+        font-family: Conqueror;
+        font-size: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+    &__scroll {
+        cursor: pointer;
+        font-size: 70px;
+    }
+    &__input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        height: 50px;
+        font-size: 18px;
+        width: 900px;
+        &:hover, &:focus {
+            border-bottom: 1px solid purple;
+        }
+        &--half {
+            width: 436px;
+        }
+    }
+    &__textarea {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        font-size: 18px;
+        width: 900px;
+        &:hover, &:focus {
+            border-bottom: 2px solid purple;
+        }
+    }
+    &__label {
+        font-family: SF;
+        font-size: 14px;
+        opacity: 0.9;
+        letter-spacing: 1px;
+    }
+    &__formgroup {
+        padding: 10px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    &__submit {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        height: 50px;
+        width: 200px;
+        background-color:rgb(60, 0, 128);
+        line-height: 50px;
+        text-align: center;
+        transition-duration: 0.2s;
+        & p {
+            font-family: SFL;
+            color: white;
+            letter-spacing: 1px;
+        }
+        &:hover {
+            background-color: black;
+        }
+    }
+}

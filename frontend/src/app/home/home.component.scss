@@ -1,0 +1,194 @@
+.featured {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.subscribe {
+    position: relative;
+    width: 98%;
+    height: 250px;
+    margin-left: 1%;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    &__header {
+        margin-right: 40%;
+        position: relative;
+        font-family: Conqueror;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    &__wrapper {
+        position: relative;
+        top: -15%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+    &__inner {
+        position: absolute;
+        top: 0%;
+    }
+    &__label {
+        font-family: SFL;
+        font-size: 20px;
+        opacity: 0.8;
+    }
+    &__input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 300px;
+        height: 40px;
+        &:hover {
+            border-bottom: 2px solid purple;
+        }
+        &:focus {
+            border-bottom: 2px solid rgb(160, 0, 0);
+        }
+    }
+    &__submit {
+        cursor: pointer;
+        position: absolute;
+        top: 18px;
+        left: 10px;
+        height: 50px;
+        width: 160px;
+        background-color:rgb(60, 0, 128);
+        line-height: 50px;
+        text-align: center;
+        transition-duration: 0.2s;
+        & p {
+            font-family: SFL;
+            color: white;
+            letter-spacing: 1px;
+        }
+        &:hover {
+            background-color: black;
+        }
+    }
+}
+
+.main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    
+    &__posts {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        &__title {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            font-family: SF;
+            font-size: 25px;
+            letter-spacing: 5px;
+            width: 550px;
+        }
+    }
+    &__about {
+        border-left: solid 1px black;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+        hr {
+            height:1px;
+            border-width:0;
+            color:black;
+            background-color:black
+        }
+        &__wrapper {
+            width: 300px;
+        }
+        &__title {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            font-family: SF;
+            font-size: 25px;
+            letter-spacing: 5px;
+            width: 300px;
+            line-height: 50px;
+        }
+        &__image {
+            border: solid 1px black;
+        }
+        &__description {
+            margin-bottom: 50px;
+            margin-top: 50px;
+            width: 290px;
+            font-family: SF;
+            font-size: 17px;
+            letter-spacing: 1px;
+            line-height: 25px;
+            opacity: 0.95;
+        }
+        &__readmore {
+            cursor: pointer;
+            margin-bottom: 50px;
+            width: 290px;
+            font-family: SF;
+            font-size: 17px;
+            letter-spacing: 1.5px;
+            line-height: 25px;
+            opacity: 0.95;
+            &:hover {
+                color: rgb(60, 0, 128);;
+            }
+        }
+        &__grid {
+            display: grid;
+            column-gap: 10px;
+            row-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 50px;
+        }
+
+        &__label {
+            font-family: SFL;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+        &__input {
+            margin-bottom: 20px;
+            margin-top: 10px;
+            border: none;
+            outline: none;
+            border: 1px solid black;
+            width: 300px;
+            height: 40px;
+        }
+        &__submit {
+            cursor: pointer;
+            height: 50px;
+            width: 300px;
+            background-color:rgb(60, 0, 128);
+            line-height: 50px;
+            text-align: center;
+            transition-duration: 0.2s;
+            & p {
+                font-family: SFL;
+                color: white;
+                letter-spacing: 1px;
+            }
+            &:hover {
+                background-color: black;
+            }
+        }
+    }
+}

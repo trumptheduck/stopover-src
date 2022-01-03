@@ -1,0 +1,49 @@
+<section class="featured">
+    <app-post-large [post]="featuredPost" header="FEATURED POST"></app-post-large>
+</section>
+<section class="subscribe">
+    <p class="subscribe__header">Never Miss a New Post.</p>
+    <div class="subscribe__wrapper">
+        <div class="subscribe__inner">
+            <p class="subscribe__label">Enter your email *</p>
+            <input type="text" name="email" class="subscribe__input">
+        </div>
+        <div class="subscribe__submit"><p>Subscribe</p></div>
+    </div>
+</section>
+<section class="main">
+    <div class="main__posts">
+        <p class="main__posts__title" >TRAIN OF THOUGHTS</p>
+        <app-post-normal *ngFor="let post of posts" [post]="post"></app-post-normal>
+    </div>
+    <div class="main__about">
+        <p class="main__about__title">ABOUT ME</p>
+        <img class="main__about__image" src="https://picsum.photos/300/200" >
+        <p class="main__about__description">
+            I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+        </p>
+        <p class="main__about__readmore">Readmore ></p>
+        <hr width="300">
+        <p class="main__about__title">FOLLOW ME</p>
+        <div class="main__about__grid">
+            <img src="https://picsum.photos/145">
+            <img src="https://picsum.photos/145">
+            <img src="https://picsum.photos/145">
+            <img src="https://picsum.photos/145">
+            <img src="https://picsum.photos/145">
+            <img src="https://picsum.photos/145">
+        </div>
+        <hr width="300">
+        <p class="main__about__title">SUBSCRIBE</p>
+        <div class="main__about__wrapper">
+            <p class="main__about__label">Enter your email *</p>
+            <input type="text" name="email" class="main__about__input">
+            <div class="main__about__submit"><p>Subscribe</p></div>
+        </div>
+        <p class="main__about__title">MY PICK<br> OF THE MONTH</p>
+        <img class="main__about__image" src="https://picsum.photos/300/200" >
+        <p class="main__about__description">
+            I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+        </p>
+    </div>
+</section>

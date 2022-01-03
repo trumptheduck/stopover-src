@@ -1,0 +1,42 @@
+.main {
+    &__title {
+        font-family: Conqueror;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    & label {
+        font-family: SF;
+        font-size: 15px;
+    }
+    & input {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid black;
+        width: 300px;
+        height: 30px;
+        margin-bottom: 30px;
+        &:hover {
+            border-bottom: 1px solid purple;
+        }
+        &:focus {
+            border-bottom: 1px solid rgb(160, 0, 0);
+        }
+    }
+    &__button {
+        cursor: pointer;
+        height: 40px;
+        width: 150px;
+        background-color:rgb(60, 0, 128);
+        line-height: 40px;
+        text-align: center;
+        transition-duration: 0.2s;
+        font-family: SFL;
+        color: white;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        &:hover {
+            background-color: black;
+        }
+    }
+}

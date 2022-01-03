@@ -1,0 +1,49 @@
+<section class="slogan">
+    <p class="slogan__subtitle">EVERYTHING IS PERSONAL. INCLUDING THIS BLOG.</p>
+    <p class="slogan__title">Trạm Dừng Chân</p>
+</section>
+<section class="menu--desktop cdk-overlay-pane">
+    <div class="menu--desktop__wrapper">
+        <a routerLink="/home">
+            <div tabindex="0" class="menu--desktop__item">
+                <p routerLink="home">Trang chủ</p>
+            </div>
+        </a>
+        <a routerLink="/home/about">
+            <div tabindex="0" class="menu--desktop__item">
+                <p>Về tôi</p>
+            </div>
+        </a>
+        <a routerLink="/home/blog">
+            <div tabindex="0" class="menu--desktop__item">
+                <p>Blog</p>
+            </div>
+        </a>
+            <div (click)="scrollToBottom()" tabindex="0" class="menu--desktop__item">
+                <p>Liên hệ</p>
+            </div>
+        <div class="menu--desktop__item">
+            <input placeholder="Tìm kiếm...">
+            <mat-icon>search</mat-icon>
+        </div>
+            <div *ngIf="!isLoggedIn" tabindex="0" class="menu--desktop__item" (click)="isLoginPromptOpened = true">
+                <mat-icon style="margin-right: 5px;">account_circle</mat-icon>
+                <p>Đăng nhập</p>
+            </div>
+            <div *ngIf="isLoggedIn" (click)="change()" class="menu--desktop__item menu--desktop__user" >
+                <p>{{userEmail}}</p>
+                <mat-icon>expand_more</mat-icon>
+                <div class="menu--desktop__user__expand" [ngClass]="{'menu--desktop__user__expand--opened':isBoxOpened}">
+                    <a routerLink="/dashboard"><p class="menu--desktop__user__expand__item">Dashboard</p></a>
+                    <p class="menu--desktop__user__expand__item" (click)="logout()">Log out</p>
+                </div>
+            </div>
+    </div>
+</section>
+
+<section class="floating cdk-overlay-pane" [ngClass]="{'floating--visible':isLoginPromptOpened}">
+    <mat-icon class="floating__exit" (click)="isLoginPromptOpened = false">close</mat-icon>
+    <app-login></app-login>
+    <p>* * *</p>
+    <app-signup></app-signup>
+</section>

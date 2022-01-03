@@ -1,0 +1,37 @@
+<section class="menu--desktop cdk-overlay-pane">
+    <div class="menu--desktop__wrapper">
+        <a routerLink="/dashboard">
+            <div tabindex="0" class="menu--desktop__item">
+                <p routerLink="home">Dashboard</p>
+            </div>
+        </a>
+        <a routerLink="/dashboard/publish">
+            <div tabindex="0" class="menu--desktop__item">
+                <p>Xuất bản</p>
+            </div>
+        </a>
+        <a routerLink="/home/blog">
+            <div tabindex="0" class="menu--desktop__item">
+                <p>Blog</p>
+            </div>
+        </a>
+        <a routerLink="/home/blog">
+            <div tabindex="0" class="menu--desktop__item">
+                <p>Blog</p>
+            </div>
+        </a>
+        <a routerLink="/home/blog">
+            <div tabindex="0" class="menu--desktop__item">
+                <p>Blog</p>
+            </div>
+        </a>
+            <div (click)="change()" class="menu--desktop__item menu--desktop__user" >
+                <p>{{userEmail}}</p>
+                <mat-icon>expand_more</mat-icon>
+                <div class="menu--desktop__user__expand" [ngClass]="{'menu--desktop__user__expand--opened':isBoxOpened}">
+                    <a routerLink="/dashboard"><p class="menu--desktop__user__expand__item">Dashboard</p></a>
+                    <p class="menu--desktop__user__expand__item" (click)="logout()">Log out</p>
+                </div>
+            </div>
+    </div>
+</section>

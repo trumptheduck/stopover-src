@@ -1,0 +1,53 @@
+.main {
+    width: 900px;
+    height: fit-content;
+    font-family: SF;
+    cursor: pointer;
+
+    &__header {
+        z-index: 2;
+        position: relative;
+        width: 400px;
+        height: 70px;
+        outline: solid black 1px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+    &__wrapper {
+        z-index: 1;
+        position: relative;
+        top: -35px;
+        outline: solid black 1px;
+    }
+    &__inner {
+        padding: 25px;
+    }
+    &__timestamp {
+        font-family: SFL;
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+    &__subtitle {
+        letter-spacing: 1px;
+        opacity: 0.9;
+        margin-bottom: 18px;
+        line-height: 23px;
+
+    }
+    &:hover {
+        .main__title, .main__subtitle {
+           color: rgb(88, 0, 189);
+        }
+    }
+}

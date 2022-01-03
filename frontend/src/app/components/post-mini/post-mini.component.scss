@@ -1,0 +1,25 @@
+.main {
+    width: 300px;
+    height: 200px;
+    height: fit-content;
+    font-family: Conqueror;
+    cursor: pointer;
+    &__wrapper {
+        z-index: 1;
+        position: relative;
+        outline: solid black 1px;
+    }
+    &__inner {
+        padding: 10px;
+    }
+    &__image {
+        min-height: 150px;
+        width: 100%;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+    }
+}

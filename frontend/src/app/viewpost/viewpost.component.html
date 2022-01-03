@@ -1,0 +1,36 @@
+<section class="main">
+    <section class="main__post">
+        <div class="main__post__wrapper">
+            <div class="main__post__inner">
+                <p class="main__post__timestamp">{{post.timestamp}}</p>
+                <p class="main__post__title">{{post.title}}</p>
+                <p class="main__post__subtitle">{{post.subtitle}}</p>
+                    <img class="main__post__image" [src]="post.thumbnail">
+            </div>
+            <div class="main__post__content">
+               <div style="position: relative;" [innerHTML]="post.content | safeHtml">
+
+               </div>
+            <hr>
+            <div class="main__post__action">
+                <p class="main__post__action__category">
+                    Art & Culture
+                </p>
+            </div>
+            </div>
+            
+        </div>
+    </section>
+</section>
+
+<section class="recent">
+    <div class="recent__wrapper">
+        <p class="recent__header">Recent Posts</p>
+        <p class="recent__seeall">See All</p>
+    </div>
+    <div class="recent__inner">
+        <app-post-mini></app-post-mini>
+        <app-post-mini></app-post-mini>
+        <app-post-mini></app-post-mini>
+    </div>
+</section>

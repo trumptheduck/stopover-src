@@ -1,0 +1,16 @@
+<section class="main">
+    <div class="main__filter">
+        <div class="main__filter__item"><p>All Posts</p></div>
+        <div class="main__filter__item"><p>Travels</p></div>
+        <div class="main__filter__item"><p>My Top 5</p></div>
+        <div class="main__filter__item"><p>Art & Cuisine</p></div>
+    </div>
+    <div class="main__content">
+        <div class="main__content__before">
+            <app-post *ngFor="let post of getCol(true)" [post]="post"></app-post>
+        </div>
+        <div class="main__content__after">
+            <app-post *ngFor="let post of getCol(false)" [post]="post"></app-post>
+        </div>
+    </div>
+</section>

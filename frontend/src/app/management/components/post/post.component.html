@@ -1,0 +1,10 @@
+<section class="main" (click)="utils.editPost(post._id)">
+    <div class="main__wrapper">
+        <img class="main__image" width="450" [src]="post.thumbnail">
+        <div class="main__inner">
+            <p class="main__timestamp">{{post.timestamp}}</p>
+            <p class="main__title">{{post.title}}</p>
+            <p class="main__subtitle">{{post.subtitle}}</p>
+        </div>
+    </div>
+</section>

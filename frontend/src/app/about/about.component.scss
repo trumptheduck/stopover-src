@@ -1,0 +1,54 @@
+.main {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    &__about {
+        width: 900px;
+        height: fit-content;
+        font-family: SF;
+        cursor: pointer;
+    
+        &__header {
+            z-index: 2;
+            position: relative;
+            width: 400px;
+            height: 70px;
+            outline: solid black 1px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            letter-spacing: 5px;
+        }
+        &__wrapper {
+            z-index: 1;
+            position: relative;
+            top: -35px;
+            outline: solid black 1px;
+        }
+        &__inner {
+            padding: 25px;
+        }
+        &__title {
+            font-family: Conqueror;
+            font-weight: bold;
+            font-size: 40px;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            line-height: 30px;
+    
+        }
+    }
+}

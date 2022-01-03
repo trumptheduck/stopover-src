@@ -1,0 +1,13 @@
+<a routerLink="/home/viewpost">
+    <section class="main">
+        <div class="main__header">{{header}}</div>
+        <div class="main__wrapper">
+            <img class="main__image" width="900" height="500" [src]="post.thumbnail">
+            <div class="main__inner">
+                <p class="main__timestamp">{{post.timestamp}}</p>
+                <p class="main__title">{{post.title}}</p>
+                <p class="main__subtitle">{{post.subtitle}}</p>
+            </div>
+        </div>
+    </section>
+</a>

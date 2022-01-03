@@ -1,0 +1,10 @@
+<section class="main">
+    <p class="main__title">Đăng ký</p>
+    <label>Email</label><br>
+    <input [(ngModel)]="email" class="main__input" type="text" name="email"><br>
+    <label>Mật khẩu</label><br>
+    <input [(ngModel)]="password" class="main__input" type="password" name="password"><br>
+    <label>Nhập lại mật khẩu</label><br>
+    <input [(ngModel)]="repassword" class="main__input" type="password" name="retypepassword"><br>
+    <div (click)="signup()" class="main__button">Đăng ký</div>
+</section>

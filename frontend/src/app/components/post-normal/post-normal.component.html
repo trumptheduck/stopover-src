@@ -1,0 +1,19 @@
+    <section class="main">
+        <div class="main__wrapper">
+            <div (click)="utils.navigateToPost(post._id)" class="main__image" [style]="'background-image:url('+post.thumbnail+')'"></div>
+            <div class="main__inner">
+                <p class="main__timestamp">{{post.timestamp}}</p>
+                <p (click)="utils.navigateToPost(post._id)" class="main__title">{{post.title}}</p>
+                <p (click)="utils.navigateToPost(post._id)" class="main__subtitle">{{post.subtitle}}</p>
+                <div class="main__action">
+                    <p class="main__action__views">{{post.views}} views</p>
+                    <p class="main__action__comments">{{post.comments.length}} comments</p>
+                    <div class="main__action__like" (click)="toggleLikePost()">
+                        <img *ngIf="!liked" class="main__action__like__false" src="../../../assets/images/Untitled.png" width="18" height="16" alt="">
+                        <ng-lottie *ngIf="liked" class="main__action__like__true" [options]="options" width="55px" height="55px" (animationCreated)="animationCreated($event)"></ng-lottie>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
